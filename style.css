@@ -222,6 +222,10 @@ section.right{
   width: 40%;
   float: left;
   position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 section.video h2{
   padding: 10% 0 50px 0;
@@ -242,12 +246,16 @@ section.left a{
   margin-left: 5%;
 }
 section.video video{
-  margin-top: 25px;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  margin: 0;
+  position: static;
+  display: block;
+  max-width: 94%;
+  max-height: 94%;
+  width: auto;
   height: auto;
-  width: 90%;
+  object-fit: contain;
+  transform: rotate(-90deg);
+  transform-origin: center;
 }
 /***************** SECTION *****************/
 
@@ -424,7 +432,9 @@ footer h6{
     width: 100%;
   }
   section.video video{
-    margin-left: 5%;
+    max-width: 90%;
+    max-height: 450px;
+    margin: 25px auto 0;
   }
 }
 @media screen and (max-width: 961px){
