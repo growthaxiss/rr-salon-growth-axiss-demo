@@ -450,31 +450,50 @@ section.lookbook{
   width: 100%;
   margin-top: 20px;
   float: left;
+  padding: 80px 0;
+  background: linear-gradient(135deg, #faf5f0 0%, #fff5f7 100%);
 }
 section.lookbook h2{
   font-size: 3.5rem;
-  margin-top: 50px;
+  margin-top: 0;
+  margin-bottom: 15px;
   text-align: center;
+  color: #333;
 }
 section.lookbook h4{
-  font-size: 3.5rem;
+  font-size: 2rem;
   font-weight: 600;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
   text-align: center;
+  color: #ff69b4;
 }
 section.grid{
   width: 85%;
   text-align: center;
   margin: auto;
 }
+section.grid img{
+  height: 350px;
+  width: 300px;
+  margin: 1%;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  object-fit: cover;
+  display: inline-block;
+}
+section.grid img:hover{
+  transform: scale(1.05) translateY(-8px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+}
 section.grid img.three{
-  height: 600px;
-  width: 390px;
+  height: 350px;
+  width: 300px;
   margin: 1%;
 }
 section.grid img.two{
   height: 350px;
-  width: 600px;
+  width: 300px;
   margin: 1%;
 }
 /***************** SECTION *****************/
@@ -650,8 +669,22 @@ footer h6{
     margin-left: 4%;
   }
   section.grid img.two{
-    width: 95%;
+    width: 90%;
     height: auto;
+  }
+  section.lookbook{
+    padding: 60px 0;
+  }
+  section.lookbook h2{
+    font-size: 3rem;
+  }
+  section.grid{
+    width: 90%;
+  }
+  section.grid img{
+    height: 280px;
+    width: 85%;
+    margin: 2%;
   }
 } 
 @media screen and (max-width: 575px){
@@ -788,6 +821,26 @@ footer h6{
   }
   section.all-services li{
     font-size: 1.2rem;
+  }
+  section.lookbook{
+    padding: 40px 0;
+  }
+  section.lookbook h2{
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+  section.lookbook h4{
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+  }
+  section.grid{
+    width: 95%;
+  }
+  section.grid img{
+    height: 250px;
+    width: 90%;
+    margin: 2%;
+    border-radius: 10px;
   }
 }
   section.grid img.three{
