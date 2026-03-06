@@ -508,6 +508,11 @@ section.grid img.two{
   width: 300px;
   margin: 1%;
 }
+section.grid img.fit-contain{
+  object-fit: contain;
+  background: #ffffff;
+  padding: 6px;
+}
 /***************** SECTION *****************/
 
 /***************** FOOTER ******************/
@@ -684,8 +689,8 @@ footer h6{
     margin-left: 4%;
   }
   section.grid img.two{
-    width: 90%;
-    height: auto;
+    width: 85%;
+    height: 280px;
   }
   section.lookbook{
     padding: 60px 0;
