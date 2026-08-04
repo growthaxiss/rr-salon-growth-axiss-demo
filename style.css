@@ -207,6 +207,125 @@ section.quality p{
 }
 /***************** SECTION *****************/
 
+/***************** FEATURED SERVICES SECTION *****************/
+section.featured-services{
+  width: 100%;
+  padding: 80px 0;
+  background: linear-gradient(135deg, #faf5f0 0%, #fff5f7 100%);
+  text-align: center;
+}
+section.featured-services h2{
+  font-size: 4rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #333;
+}
+section.featured-services > p{
+  font-size: 2rem;
+  color: #666;
+  margin-bottom: 60px;
+}
+section.featured-grid{
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.featured-card{
+  width: 28%;
+  padding: 18px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  text-align: left;
+}
+.featured-card:hover{
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+.featured-card.featured-highlight{
+  background: linear-gradient(135deg, #ff69b4 0%, #ff1493 100%);
+  color: white;
+  transform: scale(1.05);
+}
+.featured-card.featured-highlight h3,
+.featured-card.featured-highlight p{
+  color: white;
+}
+.featured-card.featured-highlight:hover{
+  transform: scale(1.05) translateY(-10px);
+}
+.featured-icon{
+  font-size: 5rem;
+  margin-bottom: 20px;
+}
+.featured-image{
+  width: 100%;
+  height: 220px;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+  background: #f3f4f6;
+  border-radius: 12px;
+  margin-bottom: 16px;
+}
+.featured-card h3{
+  font-size: 2.5rem;
+  margin: 10px 0;
+  font-weight: 600;
+}
+.featured-card p{
+  font-size: 1.4rem;
+  color: #555;
+  line-height: 1.6;
+}
+.badge{
+  display: inline-block;
+  background: black;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-top: 15px;
+}
+section.all-services{
+  margin-top: 60px;
+  text-align: center;
+}
+section.all-services h3{
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #333;
+}
+section.all-services ul{
+  display: inline-block;
+  list-style: none;
+  text-align: left;
+}
+section.all-services li{
+  font-size: 1.6rem;
+  margin: 12px 0;
+  color: #555;
+  padding-left: 30px;
+  position: relative;
+}
+section.all-services li:before{
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #ff69b4;
+  font-weight: bold;
+  font-size: 1.8rem;
+}
+/***************** FEATURED SERVICES SECTION *****************/
+
 /***************** SECTION *****************/
 section.video{
   height: 500px;
@@ -343,32 +462,56 @@ section.lookbook{
   width: 100%;
   margin-top: 20px;
   float: left;
+  padding: 80px 0;
+  background: linear-gradient(135deg, #faf5f0 0%, #fff5f7 100%);
 }
 section.lookbook h2{
   font-size: 3.5rem;
-  margin-top: 50px;
+  margin-top: 0;
+  margin-bottom: 15px;
   text-align: center;
+  color: #333;
 }
 section.lookbook h4{
-  font-size: 3.5rem;
+  font-size: 2rem;
   font-weight: 600;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
   text-align: center;
+  color: #ff69b4;
 }
 section.grid{
   width: 85%;
   text-align: center;
   margin: auto;
 }
+section.grid img{
+  height: 350px;
+  width: 300px;
+  margin: 1%;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  object-fit: cover;
+  display: inline-block;
+}
+section.grid img:hover{
+  transform: scale(1.05) translateY(-8px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+}
 section.grid img.three{
-  height: 600px;
-  width: 390px;
+  height: 350px;
+  width: 300px;
   margin: 1%;
 }
 section.grid img.two{
   height: 350px;
-  width: 600px;
+  width: 300px;
   margin: 1%;
+}
+section.grid img.fit-contain{
+  object-fit: contain;
+  background: #ffffff;
+  padding: 6px;
 }
 /***************** SECTION *****************/
 
@@ -483,6 +626,27 @@ footer h6{
 }
 /******************TABLET*******************/
 
+@media screen and (max-width: 975px){
+  .featured-card{
+    width: 45%;
+  }
+  .featured-image{
+    height: 200px;
+  }
+  section.featured-services h2{
+    font-size: 3.5rem;
+  }
+  section.featured-services > p{
+    font-size: 1.8rem;
+  }
+  .featured-card h3{
+    font-size: 2.2rem;
+  }
+  .featured-card p{
+    font-size: 1.3rem;
+  }
+}
+
 /******************MOBILE*******************/
 @media screen and (max-width: 628px){
   main{
@@ -525,8 +689,22 @@ footer h6{
     margin-left: 4%;
   }
   section.grid img.two{
-    width: 95%;
-    height: auto;
+    width: 85%;
+    height: 280px;
+  }
+  section.lookbook{
+    padding: 60px 0;
+  }
+  section.lookbook h2{
+    font-size: 3rem;
+  }
+  section.grid{
+    width: 90%;
+  }
+  section.grid img{
+    height: 280px;
+    width: 85%;
+    margin: 2%;
   }
 } 
 @media screen and (max-width: 575px){
@@ -542,6 +720,36 @@ footer h6{
   section.individuals{
     width: 100%;
   }
+  .featured-card{
+    width: 100%;
+  }
+  .featured-image{
+    height: 210px;
+  }
+  .featured-card.featured-highlight{
+    transform: none;
+  }
+  .featured-card.featured-highlight:hover{
+    transform: translateY(-10px);
+  }
+  section.featured-services h2{
+    font-size: 2.5rem;
+  }
+  section.featured-services > p{
+    font-size: 1.5rem;
+  }
+  .featured-card h3{
+    font-size: 2rem;
+  }
+  .featured-card p{
+    font-size: 1.2rem;
+  }
+  section.all-services h3{
+    font-size: 2rem;
+  }
+  section.all-services li{
+    font-size: 1.4rem;
+  }
   div.title{
     width: 50%;
     margin-bottom: 25px;
@@ -550,7 +758,119 @@ footer h6{
     font-size: 130%;
   }
 }
+
+@media screen and (max-width: 768px){
+  section.featured-services{
+    padding: 60px 0;
+  }
+  section.featured-grid{
+    width: 95%;
+    gap: 20px;
+  }
+  .featured-card{
+    width: 100%;
+    padding: 30px;
+  }
+  .featured-image{
+    height: 220px;
+  }
+  .featured-card.featured-highlight{
+    transform: none;
+  }
+  .featured-card.featured-highlight:hover{
+    transform: translateY(-10px);
+  }
+  section.featured-services h2{
+    font-size: 3rem;
+  }
+  section.featured-services > p{
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+  }
+  .featured-icon{
+    font-size: 4rem;
+  }
+  .featured-card h3{
+    font-size: 2rem;
+    margin: 15px 0;
+  }
+  .featured-card p{
+    font-size: 1.2rem;
+  }
+  section.all-services{
+    margin-top: 40px;
+  }
+  section.all-services h3{
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  section.all-services li{
+    font-size: 1.3rem;
+    margin: 10px 0;
+  }
+}
+
 @media screen and (max-width: 412px){
+  section.featured-services{
+    padding: 40px 0;
+  }
+  section.featured-services h2{
+    font-size: 2.2rem;
+  }
+  section.featured-services > p{
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+  }
+  section.featured-grid{
+    gap: 15px;
+  }
+  .featured-card{
+    padding: 20px;
+  }
+  .featured-image{
+    height: 180px;
+  }
+  .featured-icon{
+    font-size: 3.5rem;
+  }
+  .featured-card h3{
+    font-size: 1.8rem;
+    margin: 12px 0;
+  }
+  .featured-card p{
+    font-size: 1.1rem;
+  }
+  .badge{
+    font-size: 1rem;
+    padding: 6px 12px;
+  }
+  section.all-services h3{
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+  }
+  section.all-services li{
+    font-size: 1.2rem;
+  }
+  section.lookbook{
+    padding: 40px 0;
+  }
+  section.lookbook h2{
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+  section.lookbook h4{
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+  }
+  section.grid{
+    width: 95%;
+  }
+  section.grid img{
+    height: 250px;
+    width: 90%;
+    margin: 2%;
+    border-radius: 10px;
+  }
   section.grid img.three{
     width: 95%;
     height: auto;
